@@ -1,1 +1,7 @@
-You're in index of the Posts
+<h1>Posts</h1>
+<h2>a simple chat wall</h2>
+
+<p>Recent Posts:</p>
+<div id="posts" class="container">
+  <%= partial("/shared/post", :with => @posts)%>
+</div>

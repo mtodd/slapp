@@ -1,0 +1,4 @@
+<div id="post-<%= post.id %>" class="post">
+  <p class="body"><%= h(post.body) %></p>
+  <p class="created"><%= relative_date(post.created_at) %></p>
+</div>
