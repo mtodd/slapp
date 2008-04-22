@@ -1,2 +1,3 @@
 config/database.yml
 schema/schema.rb
+log/*.log
