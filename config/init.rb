@@ -24,7 +24,7 @@ end
 # use_orm :datamapper
 
 ### Uncomment for ActiveRecord ORM
-# use_orm :activerecord
+use_orm :activerecord
 
 ### Uncomment for Sequel ORM
 # use_orm :sequel
@@ -39,7 +39,7 @@ end
 ### merb.
 ###
 # use_test :test_unit
-# use_test :rspec
+use_test :rspec
 
 ### Add your other dependencies here
 
