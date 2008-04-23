@@ -20,4 +20,10 @@ describe Posts, "#create" do
     }.should change(Post, :count)
   end
   
+  it "should raise an exception when insufficient body text is submitted" do
+    lambda {
+      dispatch_to(Posts, :create).should redirect_to("/posts/index")
+    }.should raise_error(ActiveRecord::RecordInvalid)
+  end
+  
 end
