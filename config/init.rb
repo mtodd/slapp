@@ -45,11 +45,11 @@ use_test :rspec
 
 # These are some examples of how you might specify dependencies.
 # 
-# dependencies "RedCloth", "merb_helpers"
-# OR
 # dependency "RedCloth", "> 3.0"
 # OR
 # dependencies "RedCloth" => "> 3.0", "ruby-aes-cext" => "= 1.0"
+
+dependencies "RedCloth", "merb_helpers"
 
 Merb::BootLoader.after_app_loads do
   ### Add dependencies here that must load after the application loads:
