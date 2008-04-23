@@ -5,3 +5,9 @@
 <div id="posts" class="container">
   <%= partial("/shared/post", :with => @posts)%>
 </div>
+
+<p>Post Something:</p>
+<% form_tag(:action => url(:controller => "posts", :action => "create")) do %>
+  <%= text_field(:name => "body", :size => 40) %>
+  <%= submit_button("Post Message!") %>
+<% end %>

@@ -5,4 +5,9 @@ class Posts < Application
     render
   end
   
+  def create
+    Post.create!(:body => params[:body])
+    redirect url(:action => "index")
+  end
+  
 end

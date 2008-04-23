@@ -25,6 +25,12 @@ describe "posts/index" do
     end
   end
   
+  it "should have a form to create new posts with a single input and submit button" do
+    @body.should match_selector("form[@action=/posts/create]")
+    @body.should match_selector("form[@action=/posts/create] input[@name=body]")
+    @body.should match_selector("form[@action=/posts/create] button[@type=submit]")
+  end
+  
   after( :each ) do
     Post.destroy_all
   end

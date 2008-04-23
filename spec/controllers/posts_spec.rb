@@ -7,3 +7,17 @@ describe Posts, "#index" do
   end
   
 end
+
+describe Posts, "#create" do
+  
+  before(:each) do
+    @params = {:body => "It was a good though"}
+  end
+  
+  it "should redirect to #index after successfully creating a Post" do
+    lambda {
+      dispatch_to(Posts, :create, @params).should redirect_to("/posts/index")
+    }.should change(Post, :count)
+  end
+  
+end
