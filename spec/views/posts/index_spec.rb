@@ -4,8 +4,8 @@ describe "posts/index" do
   
   before(:each) do
     @controller = Posts.new(fake_request)
-    @posts = [Post.create( :body => "Merb", :created_at => Time.now ), Post.create( :body => "Rocks!", :created_at => Time.now )]
-    @controller.instance_variable_set( :@posts, @posts )
+    @posts = [Post.create(:body => "Merb", :created_at => Time.now), Post.create(:body => "Rocks!", :created_at => Time.now)]
+    @controller.instance_variable_set(:@posts, @posts)
     @body = @controller.render(:index)
   end
   
