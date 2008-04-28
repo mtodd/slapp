@@ -51,6 +51,10 @@ use_test :rspec
 
 dependencies "RedCloth", "merb_helpers"
 
+# Load the Log Observer
+Merb.logger.level = Merb::Logger::Levels[:info]
+require Merb.root/'lib'/'log_observer'
+
 Merb::BootLoader.after_app_loads do
   ### Add dependencies here that must load after the application loads:
 
